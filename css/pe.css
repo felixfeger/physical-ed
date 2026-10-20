@@ -1,0 +1,41 @@
+/* Move — PE site. Uses the tokens from felixfeger.com style.css */
+.sub { color: var(--ink-soft); margin-bottom: 24px; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.chip { border: 1px solid var(--line); background: var(--bg-raised); border-radius: 999px; padding: 6px 16px; font-size: .9rem; font-weight: 600; color: var(--teal-deep); }
+.chip:hover { background: var(--teal-deep); color: #fff; text-decoration: none; }
+
+.fields { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; }
+.fields label { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 600; color: var(--ink-soft); }
+.fields input, .fields select {
+  font: inherit; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 10px 12px; width: 150px;
+}
+
+.panel { border: 1px solid var(--line); background: var(--bg-raised); padding: 28px 26px; max-width: 620px; text-align: center; transition: background .3s, border-color .3s; }
+.panel .meta { color: var(--teal-deep); font-weight: 600; font-size: .85rem; margin-bottom: 6px; }
+.panel h3 { font-size: 1.5rem; }
+.panel p { color: var(--ink-soft); margin: 0 auto 8px; min-height: 3.2em; }
+.big { font-family: var(--font-display); font-weight: 700; font-size: 4.5rem; line-height: 1; margin: 12px 0 16px; color: var(--teal-deep); }
+.bar { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; margin: 0 0 20px; }
+.bar span { display: block; height: 100%; width: 0; background: var(--teal); transition: width .3s linear; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.fields + .actions, .actions.left { justify-content: flex-start; }
+
+.timer-panel.work { background: #DCE8E6; border-color: var(--teal); }
+.timer-panel.rest { background: #F3E6C8; border-color: var(--amber); }
+.timer-panel.rest .big { color: #8A6418; }
+
+.zones { display: grid; gap: 10px; max-width: 620px; }
+.zone { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; border: 1px solid var(--line); border-left-width: 6px; background: var(--bg-raised); padding: 14px 16px; }
+.zone strong { font-family: var(--font-display); }
+.zone span { color: var(--ink-soft); font-size: .9rem; }
+.zone .bpm { font-family: var(--font-display); font-weight: 700; grid-row: span 2; align-self: center; font-size: 1.2rem; }
+.note { color: var(--ink-soft); font-size: .85rem; margin-top: 14px; }
+
+.ex-list { list-style: none; padding: 0; margin: 24px 0 0; max-width: 620px; display: grid; gap: 10px; }
+.ex-list li { display: flex; justify-content: space-between; gap: 12px; border-left: 3px solid var(--amber); background: var(--bg-raised); padding: 14px 18px; }
+.ex-list b { font-family: var(--font-display); }
+.ex-list span { color: var(--ink-soft); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) { .bar span, .panel { transition: none; } }
